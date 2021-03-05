@@ -13,3 +13,30 @@ p {
 .italic {
   font-style: italic;
 }
+.flex-container {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+}
+.flex-container .header {
+  border: 1px solid yellow;
+  padding: 10px;
+  margin: 10px;
+}
+.flex-container .content {
+  border: 1px solid brown;
+  padding: 10px;
+  margin: 10px;
+}
+.flex-container .content .lists-wrapper {
+  border: 1px solid red;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+
+.flex-container .content .lists-wrapper .col-50 {
+  border: 1px solid black;
+  flex: 0 1 50%;
+  padding: 10px;
+}

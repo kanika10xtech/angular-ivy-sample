@@ -1,16 +1,50 @@
 <hello name="{{ name }}"></hello>
-<p [ngClass]="'bold green italic'">
-	Start editing to see some magic happen :)
-</p>
-<p [ngClass]="['bold', 'green', 'italic']">
-	Start editing to see some magic happen :)
-</p>
-<p [ngClass]="{'bold': true, 'green': true, 'italic': false}">
-	Start editing to see some magic happen :)
-</p>
-<p [ngClass]="{'bold': version =='10', 'green': version =='11', 'italic': version =='13'}">
-	Start editing to see some magic happen :)
-</p>
-<p [ngClass]="getClass()">
-	Start editing to see some magic happen :)
-</p>
+<div class="flex-container">
+	<div class="header">
+		<button (click)="generateTaskList()">Generate Task List</button>
+	</div>
+	<div class="content">
+		<div class="title">
+			<p>This Lists will be displayed on Click of Button</p>
+		</div>
+		<div *ngIf="hasTask">
+			<div class="lists-wrapper">
+				<div class="col-50">
+					<p>Top 10 tasks</p>
+					<div *ngFor="let task of tasks | slice:0:10;">
+						{{task}}
+					</div>
+				</div>
+				<div class="col-50">
+					<p>Complete List ({{tasks.length }})</p>
+					<div *ngFor="let task of tasks">
+						{{task}}
+					</div>
+				</div>
+			</div>
+			<div>
+				<p>11th element</p>
+				<div *ngIf="tasks.length > 10">
+					{{tasks[10]}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="flex-container">
+	<p [ngClass]="'bold green italic'">
+		Start editing to see some magic happen :)
+	</p>
+	<p [ngClass]="['bold', 'green', 'italic']">
+		Start editing to see some magic happen :)
+	</p>
+	<p [ngClass]="{'bold': true, 'green': true, 'italic': false}">
+		Start editing to see some magic happen :)
+	</p>
+	<p [ngClass]="{'bold': version =='10', 'green': version =='11', 'italic': version =='13'}">
+		Start editing to see some magic happen :)
+	</p>
+	<p [ngClass]="getClass()">
+		Start editing to see some magic happen :)
+	</p>
+</div>
