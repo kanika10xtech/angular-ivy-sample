@@ -11,7 +11,7 @@
 			<div class="lists-wrapper">
 				<div class="col-50">
 					<p>Top 10 tasks</p>
-					<div *ngFor="let task of tasks | slice:0:10;">
+					<div *ngFor="let task of tasks | slice:0:10 ; let i=index">
 						{{task}}
 					</div>
 				</div>
