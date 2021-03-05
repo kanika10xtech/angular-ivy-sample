@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p [ngClass]="'bold green italic'">
+	Start editing to see some magic happen :)
+</p>
+<p [ngClass]="['bold', 'green', 'italic']">
+	Start editing to see some magic happen :)
+</p>
+<p [ngClass]="{'bold': true, 'green': true, 'italic': false}">
+	Start editing to see some magic happen :)
+</p>
+<p [ngClass]="{'bold': version =='10', 'green': version =='11', 'italic': version =='13'}">
+	Start editing to see some magic happen :)
+</p>
