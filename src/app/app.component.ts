@@ -8,4 +8,8 @@ import { Component, VERSION } from "@angular/core";
 export class AppComponent {
   name = "Angular " + VERSION.major;
   version = VERSION.major;
+
+  getClass() {
+    return this.version == "11" ? "bold" : "green";
+  }
 }
